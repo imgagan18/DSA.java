@@ -47,7 +47,10 @@ if (ID == Pa[i].patient_ID) {
 printf("The name of the patient is: %s\n",Pa[i].patient_name);
 printf("The age of the patient is: %d\n",Pa[i].patient_age);
 printf("The phone number of the patient is: %d\n",Pa[i].phone_no);
-printf("The patient condition when visited last time was: %s\n",Pa[i].conditon); printf("The name of the consulting doctor is: %s\n",Pa[i].consulting_doctor); printf("The last date of consultaion was: %s\n",Pa[i].consultation_date); printf("The last status of patient was: %s\n", Pa[i].patient_status);
+printf("The patient condition when visited last time was: %s\n",Pa[i].conditon);
+ printf("The name of the consulting doctor is: %s\n",Pa[i].consulting_doctor); 
+ printf("The last date of consultaion was: %s\n",Pa[i].consultation_date);
+ printf("The last status of patient was: %s\n", Pa[i].patient_status);
 break;
 } 
 }
