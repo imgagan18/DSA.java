@@ -1,62 +1,62 @@
-#include<stdio.h> 
-struct Patient
-{
-char patient_name[30]; 
-char conditon[30];
-char consulting_doctor[30];
- int patient_ID;
-char patient_status[40]; 
-char consultation_date[30]; 
-int phone_no;
-int patient_age;
-};
-void main() {
-int i,n,password,ID;
-char ch;
-struct Patient Pa[30];
-printf("Enter number of patients whose data you want to enter");
- scanf("%d",&n);
-for(i=0;i<n;i++) 
-{
-printf("Enter the name of the patient\n");
- scanf("%s",Pa[i].patient_name);
-  printf("Enter patient age\n"); 
-  scanf("%d",&Pa[i].patient_age); 
-  printf("Enter phone number of patient\n"); 
-  scanf("%d",&Pa[i].phone_no); 
-  printf("Enter patient ID\n"); 
-  scanf("%d",&Pa[i].patient_ID); 
-  printf("Enter patient condition\n");
- scanf("%s",Pa[i].conditon);
-printf("Enter name of consulting doctor\n"); 
-scanf("%s",Pa[i].consulting_doctor);
- printf("Enter the date of consultation\n"); 
- scanf("%s",Pa[i].consultation_date);
-  printf("Enter patient status\n");
-   scanf("%s",Pa[i].patient_status);
+#include <stdio.h>
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
-printf("Enter password to access patient records\n");
- scanf("%d",&password);
-if(password == 1234)
-{
-printf("Enter patient ID whose records you want to access\n"); 
-scanf("%d",&ID);
-for(i=0;i<n;i++)
-{
-if (ID == Pa[i].patient_ID) {
-printf("The name of the patient is: %s\n",Pa[i].patient_name);
-printf("The age of the patient is: %d\n",Pa[i].patient_age);
-printf("The phone number of the patient is: %d\n",Pa[i].phone_no);
-printf("The patient condition when visited last time was: %s\n",Pa[i].conditon);
- printf("The name of the consulting doctor is: %s\n",Pa[i].consulting_doctor); 
- printf("The last date of consultaion was: %s\n",Pa[i].consultation_date);
- printf("The last status of patient was: %s\n", Pa[i].patient_status);
-break;
-} 
+
+void heapify(int arr[], int n, int i) {
+    int largest = i; // Initialize largest as the root
+    int left = 2 * i + 1; 
+    int right = 2 * i + 2; 
+
+    // If the left child is larger than the root
+    if (left < n && arr[left] > arr[largest])
+        largest = left;
+
+    // If the right child is larger than the largest so far
+    if (right < n && arr[right] > arr[largest])
+        largest = right;
+
+    // If the largest is not the root
+    if (largest != i) {
+        swap(&arr[i], &arr[largest]);
+
+        
+        heapify(arr, n, largest);
+    }
 }
-} 
-else
- {
-printf("Incorrect password\n"); 
+
+void buildMaxHeap(int arr[], int n) {
+    
+    for (int i = n / 2 - 1; i >= 0; i--) {
+        heapify(arr, n, i);
+    }
 }
+
+
+void printHeap(int arr[], int n) {
+    printf("Max Heap: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 }
+
+int main() {
+    int arr[] = {4, 10, 3, 5, 1};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    printf("the maximun element is ");
+    for (int i = 0; i < n; i++)
+    {
+      printf("%d ", arr[i]);
+    }
+     printf("\n");
+
+    buildMaxHeap(arr, n);
+    printHeap(arr, n);
+
+    return 0;
+}
+
