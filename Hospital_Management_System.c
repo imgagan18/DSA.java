@@ -5,6 +5,7 @@ void swap(int* a, int* b) {
     *a = *b;
     *b = temp;
 }
+//used to find the heapify ie heap using binary tree
 
 void heapify(int arr[], int n, int i) {
     int largest = i; // Initialize largest as the root
@@ -35,6 +36,7 @@ void buildMaxHeap(int arr[], int n) {
     }
 }
 
+//function to print heap
 
 void printHeap(int arr[], int n) {
     printf("Max Heap: ");
@@ -43,7 +45,7 @@ void printHeap(int arr[], int n) {
     }
     printf("\n");
 }
-
+//driver code
 int main() {
     int arr[] = {4, 10, 3, 5, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
