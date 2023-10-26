@@ -23,8 +23,6 @@ void heapify(int arr[], int n, int i) {
     // If the largest is not the root
     if (largest != i) {
         swap(&arr[i], &arr[largest]);
-
-        
         heapify(arr, n, largest);
     }
 }
@@ -46,7 +44,7 @@ void printHeap(int arr[], int n) {
     printf("\n");
 }
 //driver code
-int main() {
+int main(){
     int arr[] = {4, 10, 3, 5, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
     printf("the maximun element is ");
@@ -61,4 +59,3 @@ int main() {
 
     return 0;
 }
-
