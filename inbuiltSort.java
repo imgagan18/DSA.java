@@ -9,7 +9,9 @@ public class inbuiltSort {
     public static void main(String[] args) {
         System.out.println();
         int arr[]={4,3,4,5,6,3,2,4,5,6,67,7,5};
-        Arrays.sort(arr);// this is the important line of the code ...
+        Arrays.sort(arr,2,6);
+        // this is the important line of the code ...
+        // Arrays.sort(arr);
         Printarray(arr);
     }
 }
