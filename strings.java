@@ -2,16 +2,22 @@ import java.util.Scanner;
 
 public class strings {
     public static void main(String[] args) {
-        char arr[]={'a','b','c','d'};
-        String str="abcd";
-        String str2= new String("xyz");
+        // char arr[]={'a','b','c','d'};
+        // String str="abcd";
+        // String str2= new String("xyz");
          
-        // strings are IMMUTABLE
+        // // strings are IMMUTABLE
          
-        Scanner sc= new Scanner(System.in);
-        String name;
-        name=sc.nextLine();
-        System.out.println(name);
-        sc.next();
+        // Scanner sc= new Scanner(System.in);
+        // String name;
+        // name=sc.nextLine();
+        // System.out.println(name);
+        // sc.next();
+
+        String firstname= " Gagan";
+        String lastname="shenvi";
+
+        String fullname= firstname+" " + lastname;
+       System.out.println(fullname.charAt(5));
     }
 }
