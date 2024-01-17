@@ -39,7 +39,21 @@ public class question {
 
     }
     public static void main(String[] args) {
-        String Path="abcdefggfedcba";
-        System.out.println(getShortestpath(Path));
+       String s1="gagan";
+       String s2="jairam";
+       String s3= new String("jairam");
+
+       if(s1.equals(s3)){
+        System.out.println("the values are same ");
+       }
+       else{
+        System.out.println("the given valuesa ar enot same ");
+       }
+       if(s1.equals(s2)){
+        System.out.println("the values are sane");
+       }else{
+        System.out.println("the values are not same ");
+       }
+
     }
 }
