@@ -12,6 +12,7 @@ public class palindrome {
         if(str.charAt(i) !=str.charAt(n-1-i)){
             return false;
         }
+        //substing
       }
       return true;
     }

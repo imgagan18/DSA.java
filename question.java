@@ -38,22 +38,38 @@ public class question {
        return (float)Math.sqrt(X2-Y2);
 
     }
-    public static void main(String[] args) {
-       String s1="gagan";
-       String s2="jairam";
-       String s3= new String("jairam");
 
-       if(s1.equals(s3)){
-        System.out.println("the values are same ");
-       }
-       else{
-        System.out.println("the given valuesa ar enot same ");
-       }
-       if(s1.equals(s2)){
-        System.out.println("the values are sane");
-       }else{
-        System.out.println("the values are not same ");
-       }
+    public static String substirng(String str, int si, int ei){
+        String substr="";
+        for(int i= si;i<ei;i++){
+            substr+=str.charAt(i);
+        }
+        return substr;
+    }
+    // public static void main(String[] args) {
+    //     //Substirng
+    // //  String str="helloworld";
+    // //  System.out.println(substirng(str, 0, 8));
+
+    //     String fruits[]={"apple","mango","bananana"};
+    //      String largest= fruits[0];
+
+    //      for(int i=0;i<fruits.length;i++)
+    //      {
+    //         if(largest.compareTo(fruits[i])<0){
+    //            largest=fruits[i];
+    //         }
+    //      }
+    //      System.out.println(largest);
+
+    //    } 
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("");
+        for(char ch='a';ch<='z';ch++){
+sb.append(ch);
+        }
+System.out.println(sb.length());
 
     }
-}
+    }
+
