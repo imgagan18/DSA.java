@@ -48,9 +48,31 @@ public class recursion {
 
     }
 
-    
+    public static boolean Sorted(int arr[],int i ){
+        if(i==arr.length-1){
+            return true;
+        }
+        if(arr[i]>arr[i+1]){
+            return false;
+        }
+        return Sorted(arr, i+1);
+    }
+
+    public static int FirstOcc(int arr[],int i,int key){
+        if(i==arr.length){
+            return -1;
+        }
+        if (arr[i]==key){
+            return i;
+        }
+        return FirstOcc(arr,key, i+1);
+    }
+
+
     public static void main(String[] args) {//driver code 
-        int n=25;
-       System.out.println(Fib(n));
+      int arr[]={1,2,7,4,8,779,75,6};
+      int key=23;
+      
+      System.out.println(FirstOcc(arr, 7,8));
     }
 }
