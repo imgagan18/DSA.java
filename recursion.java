@@ -67,12 +67,14 @@ public class recursion {
         }
         return FirstOcc(arr,key, i+1);
     }
-
-
-    public static void main(String[] args) {//driver code 
-      int arr[]={1,2,7,4,8,779,75,6};
-      int key=23;
-      
-      System.out.println(FirstOcc(arr, 7,8));
+    public static int Power(int x, int n){
+        if (n==0) {
+            return 1;
+        }
+       return x*Power(x,n-1);
     }
+    public static void main(String[] args){ //driver code 
+      
+    System.out.println(Power(2, 10 ));
+}
 }
