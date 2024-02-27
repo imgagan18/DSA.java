@@ -1,22 +1,22 @@
-import java.util.ArrayList;
-public class arrayList {
+class arrayList{
+
+    public static void Swap(int arr[],int index1,int index2){ 
+       int temp=arr[index1];
+        arr[index1]=arr[index2];
+        arr[index2]=temp;
+    }
     public static void main(String[] args) {
-        ArrayList<Integer> list =new ArrayList<>();
-        list.add(55);
-        list.add(2);
-        list.add(6);
-        list.add(3);
-        list.add(22);
-        list.add(68);
+        int numbers[]={3,4,5,6,7,8};
+        System.out.println(numbers);
+        int index1=2;
+        int index2=4;
+        Swap(numbers, index1, index2);
 
-        int max= Integer.MIN_VALUE;
-
-        for(int i =0 ;i<list.size(); i++){
-            if(max < list.get(i)){
-                max=list.get(i);
-            }
+        for (int num : numbers) {
+            System.out.print(num + " ");
         }
-        System.out.println("the max of the given elements is "+ max);
+
+        
 
     }
 }
